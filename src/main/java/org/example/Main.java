@@ -9,11 +9,11 @@ public class Main {
     public static boolean isPalindrome(int x) {
         int mutlak = Math.abs(x);
         String sayi = Integer.toString(mutlak);
-        String ters = "";
+        StringBuilder ters = new StringBuilder();
         for (int i = sayi.length() - 1; i >= 0; i--) {
-            ters += sayi.charAt(i);
+            ters.append(sayi.charAt(i));
         }
-        return ters.equals(sayi);
+        return ters.toString().equals(sayi);
     }
 
     public static boolean isPerfectNumber(int x) {
